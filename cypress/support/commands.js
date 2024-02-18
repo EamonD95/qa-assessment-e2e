@@ -24,3 +24,15 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
+Cypress.Commands.add('setSessionVar', (key, value) => {
+    cy.window().then((win) => {
+        win.sessionStorage.setItem(key, JSON.stringify(value));
+    });
+});
+
+Cypress.Commands.add('getSessionVar', (key) => {
+    return cy.window().then((win) => {
+        return JSON.parse(win.sessionStorage.getItem(key));
+    });
+});
+

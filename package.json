@@ -11,8 +11,10 @@
     "nonGlobalStepDefinitions": false
   },
   "devDependencies": {
+    "@4tw/cypress-drag-drop": "^2.2.5",
     "cypress": "^13.6.4",
-    "cypress-cucumber-preprocessor": "^2.0.1"
+    "cypress-cucumber-preprocessor": "^2.0.1",
+    "cypress-drag-drop": "^1.1.1"
   },
   "lint-staged": {
     "*.+(js|jsx)": [
